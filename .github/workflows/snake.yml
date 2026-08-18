@@ -1,0 +1,44 @@
+name: Generate Snake
+
+on:
+  schedule:
+    - cron: "0 0 * * *" # 每天 UTC 0 点运行
+  workflow_dispatch: # 支持手动触发
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # 生成两套蛇形图：亮色 & 暗色（跟随系统主题）
+      - name: Generate Snake (light)
+        uses: Platane/snk@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            assets/snake.svg
+          color_snake: '#58A6FF'
+          color_dots: '#1f6feb,#2ea043,#39d353'
+
+      - name: Generate Snake (dark)
+        uses: Platane/snk@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            assets/snake-dark.svg
+          color_snake: '#F9A825'
+          color_dots: '#21262d,#1f6feb,#2ea043,#39d353'
+
+      # 提交生成的图片回 main 分支
+      - name: Commit & push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f assets/snake.svg assets/snake-dark.svg
+          git commit -m "chore: update contribution snake" || echo "No changes to commit"
+          git push
