@@ -95,13 +95,13 @@
   <img src="https://github-readme-stats.vercel.app/api?username=vitamin1123&show_icons=true&theme=default&hide_border=true&count_private=true&include_all_commits=true&rank_icon=github" alt="GitHub Stats" />
 </picture>
 
-<!-- 连续贡献 -->
+<!-- 连续贡献（streak-stats 已迁移到 demolab 域名） -->
 <picture>
   <source
-    srcset="https://github-readme-streak-stats.herokuapp.com/?user=vitamin1123&theme=tokyonight&hide_border=true&date_format=M+j%5B%2C+Y%5D"
+    srcset="https://streak-stats.demolab.com/?user=vitamin1123&theme=tokyonight&hide_border=true&date_format=M+j%5B%2C+Y%5D"
     media="(prefers-color-scheme: dark)"
   />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=vitamin1123&theme=default&hide_border=true&date_format=M+j%5B%2C+Y%5D" alt="GitHub Streak" />
+  <img src="https://streak-stats.demolab.com/?user=vitamin1123&theme=default&hide_border=true&date_format=M+j%5B%2C+Y%5D" alt="GitHub Streak" />
 </picture>
 
 <br/><br/>
@@ -139,7 +139,7 @@
 ### 📈 Contribution Activity
 
 <a href="https://github.com/Ashutosh00710/github-readme-activity-graph">
-  <img src="https://github-readme-activity-graph.cyclic.app/graph?username=vitamin1123&theme=tokyo-night&hide_border=true&area=true" alt="Activity Graph" width="100%" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=vitamin1123&theme=tokyo-night&hide_border=true&area=true" alt="Activity Graph" width="100%" />
 </a>
 
 ---
